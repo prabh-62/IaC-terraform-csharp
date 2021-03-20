@@ -1,0 +1,13 @@
+{
+  "name": "azure-infrastructure",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "cdktf get",
+    "build": "cdktf synth",
+    "diff": "cdktf diff",
+    "deploy": "cdktf deploy --auto-approve",
+    "destroy": "cdktf destroy --auto-approve"
+  },
+  "comment": "dont add cdktf-cli as dev-dependency"
+}

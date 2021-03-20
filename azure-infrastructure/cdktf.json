@@ -1,0 +1,10 @@
+{
+  "language": "csharp",
+  "app": "dotnet run -p AzureInfrastructure.csproj",
+  "terraformProviders": ["azurerm@~> 2.0"],
+  "terraformModules": [],
+  "context": {
+    "excludeStackIdFromLogicalIds": "true",
+    "allowSepCharsInLogicalIds": "true"
+  }
+}
