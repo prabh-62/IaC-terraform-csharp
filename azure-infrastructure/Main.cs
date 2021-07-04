@@ -120,8 +120,8 @@ namespace AzureInfrastructure
                 Name = $"{orgName}-cosmosdb",
                 Location = resourceGroup.Location,
                 ResourceGroupName = resourceGroup.Name,
-                EnableFreeTier = false,
                 OfferType = "Standard",
+                Kind = "GlobalDocumentDB",
                 GeoLocation = new ICosmosdbAccountGeoLocation[]
                 {
                     new CosmosdbAccountGeoLocation
@@ -135,9 +135,7 @@ namespace AzureInfrastructure
                 {
                     new CosmosdbAccountConsistencyPolicy
                     {
-                        ConsistencyLevel = "BoundedStaleness",
-                        MaxStalenessPrefix = 200,
-                        MaxIntervalInSeconds = 10
+                        ConsistencyLevel = "Session"
                     }
                 }
             });
